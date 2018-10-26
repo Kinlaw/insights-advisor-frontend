@@ -18,6 +18,7 @@ import {
 import { Stack, StackItem } from '@patternfly/react-core';
 import * as AppActions from '../../AppActions';
 import Loading from '../../PresentationalComponents/Loading/Loading';
+import Filters from '../Filters/Filters';
 import { onNavigate, buildBreadcrumbs } from '../../Helpers/breadcrumbs.js';
 import './_actions.scss';
 
@@ -160,7 +161,10 @@ class ViewActions extends Component {
                             <p>{ this.state.summary }</p>
                         </StackItem>
                         <StackItem className='advisor-l-actions__filters'>
-              Filters
+                            <Filters
+                                riskOfChange={ { display: true } }
+                                totalRisk={ { display: true } }
+                            />
                         </StackItem>
                         { rulesFetchStatus === 'fulfilled' && (
                             <StackItem className='advisor-l-actions__table'>
