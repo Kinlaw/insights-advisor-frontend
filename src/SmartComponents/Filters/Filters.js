@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import RiskOfChange from './RiskOfChange';
-import TotalRisk from './TotalRisk';
+import DropDownFilter from './DropDownFilter';
 import '../../App.scss';
 import './filters.scss';
 
@@ -17,8 +16,18 @@ class Filters extends Component {
     render () {
         return (
             <div widget-type='AdvisorFilters'>
-                { this.props.riskOfChange.display && <RiskOfChange /> }
-                { this.props.totalRisk.display && <TotalRisk /> }
+                { this.props.riskOfChange.display &&
+                    <DropDownFilter
+                        title='Risk Of Change'
+                        ddItems={ [ 'Very Low', 'Low', 'Moderate', 'High', 'All' ] }
+                    />
+                }
+                { this.props.totalRisk.display &&
+                    <DropDownFilter
+                        title='Total Risk'
+                        ddItems={ [ 'All', 'Low', 'Medium', 'High', 'Critical' ] }
+                    />
+                }
             </div>
         );
     }

@@ -11,7 +11,7 @@
   "dependencies": {
     "@babel/runtime": "7.1.2",
     "@patternfly/patternfly-next": "1.0.62",
-    "@patternfly/react-core": "1.26.0",
+    "@patternfly/react-core": "1.28.1",
     "@red-hat-insights/insights-frontend-components": "3.20.11",
     "classnames": "2.2.6",
     "create-react-class": "15.6.3"
